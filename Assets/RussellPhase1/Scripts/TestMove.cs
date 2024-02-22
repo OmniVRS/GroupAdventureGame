@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestMov : MonoBehaviour
+public class TestMove : MonoBehaviour
 {
     private float horizontalInput;
     private float verticalInput;
