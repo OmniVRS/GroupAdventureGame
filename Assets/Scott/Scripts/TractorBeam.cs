@@ -6,6 +6,7 @@ public class TractorBeam : MonoBehaviour
 {
     
     public GameObject holdPoint;
+    public GameObject heldItem;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class TractorBeam : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             holdPoint.transform.DetachChildren();
+            heldItem = null;
             gameObject.SetActive(false);
         }
     }
@@ -27,6 +29,7 @@ public class TractorBeam : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Collectable"))
         {
+            heldItem = collision.gameObject;
             collision.gameObject.transform.parent = holdPoint.transform;
             collision.gameObject.transform.position = new Vector2(holdPoint.transform.position.x, holdPoint.transform.position.y);
             collision.gameObject.transform.rotation = holdPoint.transform.rotation;
