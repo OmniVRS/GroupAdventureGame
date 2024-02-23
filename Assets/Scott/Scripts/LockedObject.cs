@@ -24,7 +24,7 @@ public class LockedObject : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameObject playerItem = collision.gameObject.GetComponent<TractorBeam>().heldItem;
+            GameObject playerItem = collision.gameObject.GetComponent<PlayerMovement>().tractorBeam.GetComponent<TractorBeam>().heldItem;
             if (playerItem == whatOpensThis)
             {
                 Destroy(playerItem);
