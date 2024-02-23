@@ -51,7 +51,14 @@ public class MovingHazard : MonoBehaviour
         {
             if (!usingYCos)
             {
-
+                if (!usingYCos)
+                {
+                    newY = startingPosition.y + (yAmp * Mathf.Sin((6.28f / yPeriod) * Time.time));
+                }
+                else
+                {
+                    newY = startingPosition.x + (yAmp * Mathf.Cos((6.28f / yPeriod) * Time.time));
+                }
             }
         }
 
