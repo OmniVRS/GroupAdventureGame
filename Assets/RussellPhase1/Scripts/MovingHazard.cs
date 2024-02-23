@@ -10,7 +10,7 @@ public class MovingHazard : MonoBehaviour
     public float newY;
 
     public bool isMovingVertically;
-    public bool isMovinfHorizontally;
+    public bool isMovingHorizontally;
 
     public float xAmp;
     public float yAmp;
@@ -33,7 +33,7 @@ public class MovingHazard : MonoBehaviour
     {
 
         //Horizotal Movment
-        if (isMovinfHorizontally)
+        if (isMovingHorizontally)
         {
             if (!usingXCos)
             {
@@ -51,8 +51,14 @@ public class MovingHazard : MonoBehaviour
         {
             if (!usingYCos)
             {
-
+                newY = startingPosition.y + (yAmp * Mathf.Sin((6.28f / yPeriod) * Time.time));
             }
+            else
+            {
+                newY = startingPosition.y + (yAmp * Mathf.Cos((6.28f / yPeriod) * Time.time));
+            }
+
+        
         }
 
         //Update the position
