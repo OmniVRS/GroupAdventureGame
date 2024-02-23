@@ -30,6 +30,7 @@ public class TractorBeam : MonoBehaviour
         if (collision.gameObject.CompareTag("Collectable"))
         {
             heldItem = collision.gameObject;
+            DontDestroyOnLoad(heldItem);
             collision.gameObject.transform.parent = holdPoint.transform;
             collision.gameObject.transform.position = new Vector2(holdPoint.transform.position.x, holdPoint.transform.position.y);
             collision.gameObject.transform.rotation = holdPoint.transform.rotation;

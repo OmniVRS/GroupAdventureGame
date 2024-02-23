@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         tractorBeam.SetActive(false);
-        
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -41,5 +42,10 @@ public class PlayerMovement : MonoBehaviour
                 isOn = false;
             }
         }
+    }
+
+    void OnLevelWasLoaded()
+    {
+        transform.position = GameObject.Find("spawnPoint").transform.position;
     }
 }

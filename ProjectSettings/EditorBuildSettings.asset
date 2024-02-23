@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main Folder/Scenes/MainLevel2.unity
     guid: 69cc9f58d6297ca4aa7bba41f4f3d6ab
+  - enabled: 1
+    path: Assets/Scott/ScottScene.unity
+    guid: 6eda918ef2a949f4dba739a680e2cb57
+  - enabled: 1
+    path: Assets/Scott/ScottScene2.unity
+    guid: 5eda8ab56ad23864e9438efb70f36045
   m_configObjects: {}
